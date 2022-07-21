@@ -16,7 +16,7 @@ export function App() {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
-  const addContact = ({ name, number }) => {
+  const addContact = (name, number) => {
     if (contacts.some(contact => contact.name === name)) {
       alert(`${name}, is already in contacts.`);
       return;
